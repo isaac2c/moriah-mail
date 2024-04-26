@@ -7,6 +7,6 @@
     display: inline-block;
 }
 
-img div {
+img, div {
     border: solid 1px black;
 }
