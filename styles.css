@@ -6,3 +6,7 @@
 #main-heading {
     display: inline-block;
 }
+
+div {
+    border: solid 1px black;
+}
