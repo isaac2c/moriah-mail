@@ -2,3 +2,7 @@
     height: 5em;
     vertical-align: middle;
 }
+
+#main-heading {
+    display: inline-block;
+}
