@@ -91,7 +91,7 @@ main {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(240, 240, 240);
 }
 
 #divider-left {
