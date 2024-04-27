@@ -87,13 +87,24 @@ main {
     overflow: auto;
 }
 
+#divider-left {
+    border-right: 1px double rgb(0, 0, 0);
+    width: 35%;
+    height: 100%;
+    display: inline-block;
+}
+
+#divider-right {
+    width: 65%;
+    display: inline-block;
+}
+
 /* FOOTER */
 
 footer {
     width: 100%;
     padding: 0 1em 1em;
     margin-bottom: 0;
-    border-top: 1px solid rgb(0, 0, 0);
     box-shadow: 0 0 1em rgb(150, 150, 150);
     text-align: center;
     flex: 0 0 auto;
