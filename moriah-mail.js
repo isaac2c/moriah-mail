@@ -1,6 +1,6 @@
 login = false;
-if (login == false) {
-    document.onkeydown = function(event) {
+document.onkeydown = function(event) {
+    if (login == false) {
         if (event.code == "Escape") {
             event.preventDefault();
         }
