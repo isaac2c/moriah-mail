@@ -5,10 +5,10 @@ header {
 #logo-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 #logo-image {
     height: 8em;
-    justify-content: center;
 }
 
