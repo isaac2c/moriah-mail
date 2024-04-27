@@ -135,7 +135,7 @@ main {
 
 .inner-container {
     flex: 1 1 auto;
-    overflow: scroll;
+    overflow-y: scroll;
     border-radius: 2em 0 0 2em;
 }
 
