@@ -88,14 +88,14 @@ main {
 }
 
 #divider-left {
-    border-right: 1px double rgb(0, 0, 0);
-    width: 35%;
+    border-right: 3px solid rgb(0, 0, 0);
+    width: 40%;
     height: 100%;
     display: inline-block;
 }
 
 #divider-right {
-    width: 65%;
+    width: 60%;
     display: inline-block;
 }
 
