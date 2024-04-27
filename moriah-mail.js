@@ -1,14 +1,24 @@
 login = false;
 if (login == false) {
-    document.onkeydown = function(evt) {
-        console.log(evt.code);
-        if (evt.code == "Escape") {
-            evt.preventDefault();
+    document.onkeydown = function(event) {
+        if (event.code == "Escape") {
+            event.preventDefault();
         }
     }
 }
 modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
+
+loginForm = document.querySelector("#login-form");
+loginForm.addEventListener("submit", nonSubmit);
+function nonSubmit(event) {
+    event.preventDefault(event);
+    // Change login form
+    if (loginForm[1].value == "admin@constantinslibrary.com") {
+        login = true;
+        modalDialog.close;
+    }
+}
 
 changingHeader = document.querySelector("#mail");
 if (true) {
