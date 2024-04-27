@@ -48,7 +48,7 @@ dialog {
 }
 
 dialog::backdrop {
-    backdrop-filter: blur(5rem);
+    backdrop-filter: blur(0.5rem);
 }
 
 #login-container {
