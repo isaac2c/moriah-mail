@@ -1,16 +1,14 @@
-#logo-image {
-    height: 1em;
-    vertical-align: middle;
-}
-
-#main-heading {
-    display: inline-block;
-}
-
-img, div {
-    border: solid 1px black;
-}
-
 header {
     padding-top: 1px;
 }
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#logo-image {
+    height: 8em;
+    justify-content: center;
+}
+
