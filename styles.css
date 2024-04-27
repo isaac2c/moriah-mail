@@ -10,3 +10,7 @@
 img, div {
     border: solid 1px black;
 }
+
+header {
+    padding-top: 1px;
+}
