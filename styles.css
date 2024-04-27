@@ -53,6 +53,15 @@ header {
     height: 8em;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
+#mail {
+    cursor: pointer;
+    color: rgb(164, 34, 59);
+}
+
 /* MAIN */
 
 main {
@@ -60,11 +69,6 @@ main {
     padding: 0 1em;
     flex: 1 1 auto;
     overflow: auto;
-}
-
-#mail {
-    cursor: pointer;
-    color: rgb(113, 3, 25);
 }
 
 /* FOOTER */
