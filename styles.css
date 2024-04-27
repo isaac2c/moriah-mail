@@ -1,8 +1,13 @@
 /* GLOBAL */
 
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Tangerine:wght@400;700&family=Zeyada&display=swap');
+
 * {
     box-sizing: border-box;
 }
+
 
 html, body {
     margin: 0;
