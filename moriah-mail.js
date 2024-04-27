@@ -2,7 +2,7 @@ modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
 document.onkeydown = function(evt) {
     console.log(evt.code);
-    if (evt.code == 27) {
+    if (evt.code == "Escape") {
         evt.preventDefault();
     }
 }
