@@ -42,10 +42,19 @@ a:active {
 
 /* DIALOG */
 
+dialog {
+    height: 100%;
+    width: 50%;
+    background-color: red;
+}
+
+dialog::backdrop {
+    filter: blur(1rem);
+}
+
 #login-container {
     height: 100%;
     width: 100%;
-    background-color: red;
 }
 
 /* HEADER */
