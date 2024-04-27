@@ -99,6 +99,10 @@ main {
     height: 100%;
     margin: 0;
     padding: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 #divider-right {
@@ -106,11 +110,23 @@ main {
     height: 100%;
     margin: 0;
     padding: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.inner-header {
+    width: 100%
+    flex: 0, 0, auto;
+    border: 2px solid black;
+    border-radius: 2em;
+    margin-bottom: 2em;
 }
 
 .inner-container {
     width: 100%;
-    height: 100%;
+    flex: 1, 1, auto;
     border: 2px solid black;
     border-radius: 2em;
     overflow: auto;
