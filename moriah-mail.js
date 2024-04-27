@@ -1,6 +1,6 @@
 modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
-while (modalDialog.style.display == "block") {
+while (true) {
     onkeydown = function(evt) {
         console.log(evt.code);
         if (evt.code == 27) {
