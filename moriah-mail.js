@@ -1,11 +1,14 @@
-modalDialog = document.getElementById("modal-dialog");
+login = false;
 modalDialog.showModal();
-document.onkeydown = function(evt) {
-    console.log(evt.code);
-    if (evt.code == "Escape") {
-        evt.preventDefault();
+if (login == false) {
+    document.onkeydown = function(evt) {
+        console.log(evt.code);
+        if (evt.code == "Escape") {
+            evt.preventDefault();
+        }
     }
 }
+modalDialog = document.getElementById("modal-dialog");
 
 changingHeader = document.querySelector("#mail");
 if (true) {
