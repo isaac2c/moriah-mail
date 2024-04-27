@@ -120,6 +120,7 @@ main {
     width: 100%;
     border: 2px solid black;
     border-radius: 2em;
+    background-color: rgb(255, 160, 170);
 }
 
 .inner-header {
