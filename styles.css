@@ -25,6 +25,14 @@ body {
     flex-direction: column;
 }
 
+a:any-link {
+    color: rgb(164, 34, 59);
+}
+
+a:active {
+    color: rgb(91, 221, 196);
+}
+
 /* HEADER */
 
 header {
