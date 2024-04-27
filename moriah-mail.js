@@ -1,11 +1,11 @@
 modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
-    onkeydown = function(evt) {
-        console.log(evt.code);
-        if (evt.code == 27) {
-            evt.preventDefault();
-        }
+document.onkeydown = function(evt) {
+    console.log(evt.code);
+    if (evt.code == 27) {
+        evt.preventDefault();
     }
+}
 
 changingHeader = document.querySelector("#mail");
 if (true) {
