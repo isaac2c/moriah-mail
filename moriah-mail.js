@@ -2,7 +2,7 @@ modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
 while (modalDialog.style.display == "block") {
     document.onkeydown = function(evt) {
-        if (evt.keyCode == 27) {
+        if (evt.code == 27) {
             evt.preventDefault();
         }
     }
