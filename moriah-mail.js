@@ -15,6 +15,8 @@ function nonSubmit(event) {
     event.preventDefault(event);
     // Change login form
     if (loginForm[0].value == "admin@constantinslibrary.com") {
+        document.querySelector("#user-id-1").innerText = "Stephen";
+        document.querySelector("#user-id-2").innerText = "Stephen";
         login = true;
         modalDialog.close();
     }
