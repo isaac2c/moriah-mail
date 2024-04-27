@@ -134,7 +134,7 @@ main {
 }
 
 .inner-content {
-    padding: 2rem, 0;
+    padding: 0, rem;
 }
 
 /* FOOTER */
