@@ -86,21 +86,24 @@ main {
     margin: 0;
     padding: 0;
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #divider-left {
     border-right: 2px solid rgb(0, 0, 0);
-    width: 40%;
+    flex: 1;
     height: 100%;
-    display: inline-block;
     margin: 0;
     padding: 2em;
 }
 
 #divider-right {
-    width: 59%;
+    flex: 2;
     height: 100%;
-    display: inline-block;
     margin: 0;
     padding: 2em;
 }
