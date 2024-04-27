@@ -1,4 +1,5 @@
 modalDialog = document.getElementById("modal-dialog");
+modalDialog.openModal();
 
 changingHeader = document.querySelector("#mail");
 if (true) {
