@@ -14,7 +14,7 @@ loginForm.addEventListener("submit", nonSubmit);
 function nonSubmit(event) {
     event.preventDefault(event);
     // Change login form
-    if (loginForm[1].value == "admin@constantinslibrary.com") {
+    if (loginForm[0].value == "admin@constantinslibrary.com") {
         login = true;
         modalDialog.close;
     }
