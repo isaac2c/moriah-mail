@@ -1,15 +1,17 @@
 changingHeader = document.querySelector("#mail");
-changingHeader.onclick = function() {
-    changingHeader.innerText = "Correspondence";
-    changingHeader.style.fontFamily = "Lugrasimo, Tangerine, Zeyada, Brush Script MT, cursive";
+if (true) {
+    changingHeader.style.cursor = "pointer";
     changingHeader.onclick = function() {
-        changingHeader.innerText = "Discourse";
+        changingHeader.innerText = "Correspondence";
         changingHeader.style.fontFamily = "Tangerine, Lugrasimo, Zeyada, Brush Script MT, cursive";
         changingHeader.onclick = function() {
-            changingHeader.style.cursor = "auto";
-            if (false) {
-
-            }
-        }
-    }
+            changingHeader.innerText = "Discourse";
+            changingHeader.style.fontFamily = "Lugrasimo, Tangerine, Zeyada, Brush Script MT, cursive";
+            changingHeader.onclick = function() {
+                changingHeader.innerText = "Mail";
+                changingHeader.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
+                changingHeader.style.cursor = "auto";
+            };
+        };
+    };
 };
