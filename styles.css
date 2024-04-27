@@ -66,6 +66,10 @@ h1 {
     color: rgb(164, 34, 59);
 }
 
+#logout-container {
+    padding-right: 5em;
+}
+
 /* MAIN */
 
 main {
