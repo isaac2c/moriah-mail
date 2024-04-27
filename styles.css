@@ -57,6 +57,10 @@ h1 {
     margin-bottom: 0;
 }
 
+#subtitle {
+    margin-top: 0;
+}
+
 #mail {
     cursor: pointer;
     color: rgb(164, 34, 59);
