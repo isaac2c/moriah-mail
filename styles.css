@@ -93,6 +93,7 @@ main {
     height: 100%;
     display: inline-block;
     margin: 0;
+    padding: 2em;
 }
 
 #divider-right {
@@ -100,12 +101,12 @@ main {
     height: 100%;
     display: inline-block;
     margin: 0;
+    padding: 2em;
 }
 
 .inner-container {
-    margin: 5%;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border: 1px solid black;
 }
 
