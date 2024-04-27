@@ -48,7 +48,7 @@ dialog {
 }
 
 dialog::backdrop {
-    background-color: rgb(164, 34, 59);
+    filter: blur(5rem);
 }
 
 #login-container {
