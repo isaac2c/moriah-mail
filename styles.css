@@ -148,7 +148,7 @@ main {
     padding: 0 2rem;
 }
 
-#email-block {
+.email-block {
     text-wrap: nowrap;
     overflow: none;
     border-bottom: 1px solid rgb(0, 0, 0);
