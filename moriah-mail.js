@@ -1,3 +1,5 @@
+document.getElementById(dialog).showModal();
+
 changingHeader = document.querySelector("#mail");
 if (true) {
     changingHeader.style.cursor = "pointer";
