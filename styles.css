@@ -92,12 +92,14 @@ main {
     width: 40%;
     height: 100%;
     display: inline-block;
+    margin: 0;
 }
 
 #divider-right {
     width: 60%;
     height: 100%;
     display: inline-block;
+    margin: 0;
 }
 
 .inner-container {
