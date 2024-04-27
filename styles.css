@@ -44,12 +44,11 @@ a:active {
 
 dialog {
     height: 100%;
-    width: 50%;
-    background-color: red;
+    width: 40%;;
 }
 
 dialog::backdrop {
-    filter: blur(100px);
+    background-color: rgb(164, 34, 59);
 }
 
 #login-container {
