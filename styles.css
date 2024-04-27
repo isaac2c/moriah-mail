@@ -21,6 +21,7 @@ body {
 #primary-container {
     max-height: 100%;
     height: 100%;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
@@ -82,9 +83,9 @@ h1 {
 
 main {
     width: 100%;
+    margin: 0;
     padding: 0;
     flex: 1 1 auto;
-    overflow: auto;
 }
 
 #divider-left {
