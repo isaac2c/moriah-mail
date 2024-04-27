@@ -1,5 +1,4 @@
 login = false;
-modalDialog.showModal();
 if (login == false) {
     document.onkeydown = function(evt) {
         console.log(evt.code);
@@ -9,6 +8,7 @@ if (login == false) {
     }
 }
 modalDialog = document.getElementById("modal-dialog");
+modalDialog.showModal();
 
 changingHeader = document.querySelector("#mail");
 if (true) {
