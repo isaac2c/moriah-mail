@@ -1,5 +1,8 @@
+login = false;
 modalDialog = document.getElementById("modal-dialog");
-modalDialog.showModal();
+while (login == false) {
+    modalDialog.showModal();
+}
 
 changingHeader = document.querySelector("#mail");
 if (true) {
