@@ -1,5 +1,12 @@
 modalDialog = document.getElementById("modal-dialog");
-        modalDialog.showModal();
+modalDialog.showModal();
+while (modalDialog.style.display == "block") {
+    document.onkeydown = function(evt) {
+        if (evt.keyCode == 27) {
+            evt.preventDefault();
+        }
+    }
+}
 
 changingHeader = document.querySelector("#mail");
 if (true) {
