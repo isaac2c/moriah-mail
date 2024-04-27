@@ -118,7 +118,7 @@ main {
 
 .inner-header {
     width: 100%
-    flex: 0, 0, auto;
+    flex: 0 0 auto;
     border: 2px solid black;
     border-radius: 2em;
     margin-bottom: 2em;
@@ -126,7 +126,7 @@ main {
 
 .inner-container {
     width: 100%;
-    flex: 1, 1, auto;
+    flex: 1 1 auto;
     border: 2px solid black;
     border-radius: 2em;
     overflow: auto;
