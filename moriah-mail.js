@@ -5,7 +5,7 @@ document.onkeydown = function(event) {
             event.preventDefault();
         }
     }
-}
+};
 modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
 
@@ -20,10 +20,10 @@ function nonSubmit(event) {
         login = true;
         modalDialog.close();
     }
-}
+};
 
 changingHeader = document.querySelector("#mail");
-if (true) {
+if (localStorage.getItem(dateMailClicked)) {
     changingHeader.style.cursor = "pointer";
     changingHeader.onclick = function() {
         changingHeader.style.fontSize = "0.8em"
@@ -36,7 +36,11 @@ if (true) {
                 changingHeader.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
+                localStorage.setItem(dateMailClicked, Date.now());
+                console.log(date(localStorage.getItem(dateMailClicked)));
             };
         };
     };
-};
+} else {
+    console.log(date(localStorage.getItem(dateMailClicked)));
+}
