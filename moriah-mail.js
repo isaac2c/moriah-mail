@@ -46,7 +46,7 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
-                dateMailClicked = Date.now();
+                dateMailClicked = string(Date.now());
                 localStorage.setItem("date-mail-clicked", dateMailClicked);
                 console.log(Date(localStorage.getItem("date-mail-clicked")));
             };
@@ -55,9 +55,3 @@ if (!localStorage.getItem("date-mail-clicked")) {
 } else {
     console.log(Date(localStorage.getItem("date-mail-clicked")));
 }
-
-
-// Testing
-
-dateNow = Date.now()
-console.log("The date is " + dateNow)
