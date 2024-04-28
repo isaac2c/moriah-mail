@@ -2,7 +2,6 @@
 // This code sets information stored in local storage to expire if 30 days or more have elapsed since the user last accessed the site.
 if (Number(localStorage.getItem("last-accessed")) <= (Date.now() - 2592000000)) {
     localStorage.removeItem("date-mail-clicked");
-    console.log("Expired");
 }
 localStorage.setItem("last-accessed", Date.now());
 
@@ -47,7 +46,8 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
-                localStorage.setItem("date-mail-clicked", Date.now());
+                dateMailClicked = Date.now();
+                localStorage.setItem("date-mail-clicked", dateMailClicked());
                 console.log(Date(localStorage.getItem("date-mail-clicked")));
             };
         };
