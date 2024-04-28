@@ -1,3 +1,15 @@
+// CLEAR LOCAL STORAGE
+// This code sets information stored in local storage to expire if 30 days or more have elapsed since the user last accessed the site.
+if (number(localStorage.getItem("last-accessed")) >= (Date.now + 2592000000)) {
+    localStorage.removeItem("date-mail-clicked");
+    log.console("Expired")
+}
+localStorage.setItem("last-accessed", Date.now());
+localStorage.setItem("last-accessed", Date.parse("2023-04-22"))
+
+//
+//
+
 login = false;
 document.onkeydown = function(event) {
     if (login == false) {
@@ -23,7 +35,7 @@ function nonSubmit(event) {
 };
 
 changingHeader = document.querySelector("#mail");
-if (!localStorage.getItem("dateMailClicked")) {
+if (!localStorage.getItem("date-mail-clicked")) {
     changingHeader.style.cursor = "pointer";
     changingHeader.onclick = function() {
         changingHeader.style.fontSize = "0.8em"
@@ -36,11 +48,11 @@ if (!localStorage.getItem("dateMailClicked")) {
                 changingHeader.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
-                localStorage.setItem("dateMailClicked", Date.now());
-                console.log(Date(localStorage.getItem("dateMailClicked")));
+                localStorage.setItem("date-mail-clicked", Date.now());
+                console.log(Date(localStorage.getItem("date-mail-clicked")));
             };
         };
     };
 } else {
-    console.log(Date(localStorage.getItem("dateMailClicked")));
+    console.log(Date(localStorage.getItem("date-mail-clicked")));
 }
