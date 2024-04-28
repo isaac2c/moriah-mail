@@ -23,7 +23,7 @@ function nonSubmit(event) {
 };
 
 changingHeader = document.querySelector("#mail");
-if (localStorage.getItem("dateMailClicked")) {
+if (!localStorage.getItem("dateMailClicked")) {
     changingHeader.style.cursor = "pointer";
     changingHeader.onclick = function() {
         changingHeader.style.fontSize = "0.8em"
