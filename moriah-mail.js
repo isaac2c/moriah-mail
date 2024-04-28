@@ -56,3 +56,8 @@ if (!localStorage.getItem("date-mail-clicked")) {
     console.log(Date(localStorage.getItem("date-mail-clicked")));
 }
 
+
+// Testing
+
+dateNow = Date.now()
+console.log("The date is " + dateNow)
