@@ -47,7 +47,7 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
                 dateMailClicked = Date.now();
-                localStorage.setItem("date-mail-clicked", dateMailClicked());
+                localStorage.setItem("date-mail-clicked", dateMailClicked);
                 console.log(Date(localStorage.getItem("date-mail-clicked")));
             };
         };
@@ -55,3 +55,4 @@ if (!localStorage.getItem("date-mail-clicked")) {
 } else {
     console.log(Date(localStorage.getItem("date-mail-clicked")));
 }
+
