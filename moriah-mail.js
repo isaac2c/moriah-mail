@@ -37,7 +37,7 @@ if (!localStorage.getItem("dateMailClicked")) {
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
                 localStorage.setItem("dateMailClicked", Date.now());
-                console.log(date(localStorage.getItem("dateMailClicked")));
+                console.log(Date(localStorage.getItem("dateMailClicked")));
             };
         };
     };
