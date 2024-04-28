@@ -46,12 +46,11 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
-                dateMailClicked = String(Date.now());
-                localStorage.setItem("date-mail-clicked", dateMailClicked);
-                console.log(Date(localStorage.getItem("date-mail-clicked")));
+                localStorage.setItem("date-mail-clicked", Date.now());
+                console.log((localStorage.getItem("date-mail-clicked")));
             };
         };
     };
 } else {
-    console.log(Date(localStorage.getItem("date-mail-clicked")));
+    console.log((localStorage.getItem("date-mail-clicked")));
 }
