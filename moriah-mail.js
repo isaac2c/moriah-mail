@@ -46,7 +46,7 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.style.fontFamily = "Verdana, Geneva, Tahoma, sans-serif";
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
-                dateMailClicked = string(Date.now());
+                dateMailClicked = String(Date.now());
                 localStorage.setItem("date-mail-clicked", dateMailClicked);
                 console.log(Date(localStorage.getItem("date-mail-clicked")));
             };
