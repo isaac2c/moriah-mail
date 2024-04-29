@@ -51,7 +51,7 @@ dialog::backdrop {
     backdrop-filter: blur(0.5rem);
 }
 
-#login-logo, #login-submit, label  {
+#login-logo, #login-submit, label, form p {
     display: block;
     margin: 0 auto;
     width: 60%;
@@ -59,6 +59,10 @@ dialog::backdrop {
 
 label {
     padding-bottom: 2em;
+}
+
+label:last-of-type {
+    padding-bottom: 0;
 }
 
 input {
