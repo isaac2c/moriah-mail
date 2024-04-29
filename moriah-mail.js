@@ -165,12 +165,12 @@ function constructAsync3() {
 document.getElementById("forgot-link").onclick = function() {
     if (loginForm[0].value == "stephen.malling@edifyingmail.com") {
         document.getElementById("password-container").innerHTML = "Memorable information: \
-    <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
+    <input id=\"mem-info\" type=\"password\" name=\"mem-info\" required><\/input>";
         document.getElementById("form-paragraph").innerText = "Hint: Mother's maiden name";
     } else {
         if (loginForm[0].value == "estherabigailolsen@edifyingmail.com") {
             document.getElementById("password-container").innerHTML = "Memorable information: \
-        <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
+        <input id=\"mem-info\" type=\"password\" name=\"mem-info\" required><\/input>";
             document.getElementById("form-paragraph").innerText = "Hint: First pet";
         } else {
             alert("Please check username.")
