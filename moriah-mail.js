@@ -55,9 +55,10 @@ emails = [
 asyncEmail1 = {
     "id": "async-email-1",
     "date": "new Date(Number(localStorage.getItem(\"first-login\")) + 10000)",
-    "sender": "async@domain.com",
-    "subject": "Async Email 1",
-    "text": "This arrives after 10 seconds."
+    "sender": "noreply@edifyingmail.com",
+    "subject": "New login detected",
+    "text": "A new device has signed into your account.<br><br>If this was not you, please immediately change your password and take \
+    steps to secure your account.  If this was you, you may safely disregard this email.<br><br>Thank you for using Edifying Mail!"
 };
 asyncEmail2 = {
     "id": "async-email-2",
@@ -188,17 +189,17 @@ function nonSubmit(event) {
         } else {
             setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
         }
-        if (Number(localStorage.getItem("first-login")) + 30000 <= Date.now()) {
+        if (Number(localStorage.getItem("first-login")) + 600000 <= Date.now()) {
             if (localStorage.getItem("date-mail-clicked")) {
                 if (!document.getElementById("async-email-click")) {
-                    if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login")) + 30000) {
+                    if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login")) + 600000) {
                         constructAsync3();
                     }
                 }
             }
             constructAsync2();
         } else {
-            setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 30000) - Date.now());
+            setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
         }
         if (localStorage.getItem("date-mail-clicked")) {
             if (!document.getElementById("async-email-click")) {
