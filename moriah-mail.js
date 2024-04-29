@@ -104,26 +104,6 @@ document.onkeydown = function(event) {
 modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
 
-// MEMORABLE INFORMATION
-// This function determines the behaviour of the memorable information link.
-
-document.getElementById("forgot-link").onclick = function() {
-    // Change username
-    if (loginForm[0].value == "stephen@edifyingmail.com") {
-        document.getElementById("password-container").innerHTML = "Memorable information: \
-    <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
-        document.getElementById("form-paragraph").innerText = "Hint: Mother's maiden name";
-    } else {
-        if (loginForm[0].value == "estherabigailolsen@edifyingmail.com") {
-            document.getElementById("password-container").innerHTML = "Memorable information: \
-        <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
-            document.getElementById("form-paragraph").innerText = "Hint: First pet";
-        } else {
-            alert("Please check username.")
-        }
-    }
-}
-
 // CONSTRUCT EMAIL
 // These functions produce the emails displayed in the inbox.
 
@@ -177,6 +157,26 @@ function constructAsync3() {
     constructEmail(asyncEmail3.id, asyncEmail3.date, asyncEmail3.sender, asyncEmail3.subject, asyncEmail3.text);
     if (document.getElementById("async-email-click")) {
         emailList.insertBefore(document.getElementById("async-email-click"), emailList.firstChild);
+    }
+};
+
+// MEMORABLE INFORMATION
+// This function determines the behaviour of the memorable information link.
+
+document.getElementById("forgot-link").onclick = function() {
+    // Change username
+    if (loginForm[0].value == "stephen@edifyingmail.com") {
+        document.getElementById("password-container").innerHTML = "Memorable information: \
+    <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
+        document.getElementById("form-paragraph").innerText = "Hint: Mother's maiden name";
+    } else {
+        if (loginForm[0].value == "estherabigailolsen@edifyingmail.com") {
+            document.getElementById("password-container").innerHTML = "Memorable information: \
+        <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
+            document.getElementById("form-paragraph").innerText = "Hint: First pet";
+        } else {
+            alert("Please check username.")
+        }
     }
 };
 
