@@ -43,7 +43,7 @@ modalDialog.showModal();
 
 function constructEmail(emailID, emailDate, emailSender, emailSubject, emailText) {
     newEmail = document.createElement("div");
-    newEmail.setAttribute("id", "")
+    newEmail.setAttribute("id", emailID)
     newEmail.setAttribute("class", "email-block inner-content");
     newDate = document.createElement("p")
     tempDate = indirectEval(emailDate);
