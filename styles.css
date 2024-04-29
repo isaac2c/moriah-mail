@@ -57,7 +57,7 @@ dialog::backdrop {
     width: 60%;
 }
 
-label {
+label, form p {
     padding-bottom: 2em;
 }
 
@@ -73,7 +73,7 @@ input {
 
 #login-submit {
     margin-top: 1.5rem;
-    background-color: rgb(164, 34, 59);
+    background-color: rgb(200, 50, 70);
     color: (rgb(255, 255, 255));
 }
 
