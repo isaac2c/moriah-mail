@@ -75,9 +75,10 @@ asyncEmail3 = {
 };
 
 // EARLY DECLARATIONS
-// This is a function used elsewhere that must be declared early.
+// These are variables used elsewhere that must be declared early.
 
 indirectEval = eval;
+const emailList = document.querySelector("#email-list");
 
 // CLEAR LOCAL STORAGE
 // This code sets information stored in local storage to expire if 30 days or more have elapsed since the user last accessed the site.
@@ -151,8 +152,6 @@ function constructAsync3() {
     emailList.insertBefore(document.getElementById("async-email-2"), emailList.firstChild);
 };
 
-
-
 // LOGIN FORM
 // This code determines the behaviour of the login form element in response to user input.
 
@@ -164,7 +163,6 @@ function nonSubmit(event) {
     if (loginForm[0].value == "admin@constantinslibrary.com") {
         document.querySelector("#user-id-1").innerText = "Stephen";
         document.querySelector("#user-id-2").innerText = "Stephen";
-        const emailList = document.querySelector("#email-list");
         while (emailList.lastChild) {
             emailList.removeChild(emailList.lastChild);
         }
@@ -174,7 +172,7 @@ function nonSubmit(event) {
         for (const email of emails) {
             constructEmail(email.id, email.date, email.sender, email.subject, email.text);
         }
-        if (Number(localStorage.getItem("first-login")) + 10000 >= Date.now()) {
+        if (Number(localStorage.getItem("first-login")) + 10000 <= Date.now()) {
             if (localStorage.getItem("date-mail-clicked")) {
                 if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login") + 10000)) {
                     constructAsync3();
@@ -182,12 +180,12 @@ function nonSubmit(event) {
             }
             constructAsync1();
         } else {
-            setTimeout(constructAsync1(), Date.now - (Number(localStorage.getItem("first-login")) + 10000))
+            setTimeout(constructAsync1(), (Number(localStorage.getItem("first-login")) + 10000) - Date.now())
         }
-        if (Number(localStorage.getItem("first-login")) + 600000 >= Date.now()) {
+        if (Number(localStorage.getItem("first-login")) + 600000 <= Date.now()) {
             constructAsync2();
         } else {
-            setTimeout(constructAsync2(), Date.now - (Number(localStorage.getItem("first-login")) + 600000))
+            setTimeout(constructAsync2(), (Number(localStorage.getItem("first-login")) + 600000) - Date.now())
         }
         if (localStorage.getItem("date-mail-clicked")) {
             if (!document.getElementById("async-email-click")) {
