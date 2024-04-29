@@ -141,15 +141,21 @@ function constructEmail(emailID, emailDate, emailSender, emailSubject, emailText
 };
 function constructAsync1() {
     constructEmail(asyncEmail1.id, asyncEmail1.date, asyncEmail1.sender, asyncEmail1.subject, asyncEmail1.text);
-    emailList.insertBefore(document.getElementById("async-email-click"), emailList.firstChild);
+    if (document.getElementById("async-email-1")) {
+        emailList.insertBefore(document.getElementById("async-email-1"), emailList.firstChild);
+    }
 };
 function constructAsync2() {
     constructEmail(asyncEmail2.id, asyncEmail2.date, asyncEmail2.sender, asyncEmail2.subject, asyncEmail2.text);
-    emailList.insertBefore(document.getElementById("async-email-1"), emailList.firstChild);
+    if (document.getElementById("async-email-2")) {
+        emailList.insertBefore(document.getElementById("async-email-2"), emailList.firstChild);
+    }
 };
 function constructAsync3() {
     constructEmail(asyncEmail3.id, asyncEmail3.date, asyncEmail3.sender, asyncEmail3.subject, asyncEmail3.text);
-    emailList.insertBefore(document.getElementById("async-email-2"), emailList.firstChild);
+    if (document.getElementById("async-email-click")) {
+        emailList.insertBefore(document.getElementById("async-email-click"), emailList.firstChild);
+    }
 };
 
 // LOGIN FORM
