@@ -80,6 +80,7 @@ asyncEmail3 = {
 
 indirectEval = eval;
 const emailList = document.querySelector("#email-list");
+loginFormReset = document.querySelector("#login-form").innerHTML;
 
 // CLEAR LOCAL STORAGE
 // This code sets information stored in local storage to expire if 30 days or more have elapsed since the user last accessed the site.
@@ -214,6 +215,7 @@ function nonSubmit(event) {
         }
         login = true;
         modalDialog.close();
+        loginForm.innerHTML = loginFormReset;
     }
 };
 
