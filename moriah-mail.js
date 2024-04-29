@@ -187,7 +187,7 @@ function nonSubmit(event) {
             }
             constructAsync1();
         } else {
-            setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
+            var asyncTimeout1 = setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
         }
         if (Number(localStorage.getItem("first-login")) + 600000 <= Date.now()) {
             if (localStorage.getItem("date-mail-clicked")) {
@@ -199,7 +199,7 @@ function nonSubmit(event) {
             }
             constructAsync2();
         } else {
-            setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
+            var asyncTimeout2 = setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
         }
         if (localStorage.getItem("date-mail-clicked")) {
             if (!document.getElementById("async-email-click")) {
@@ -252,4 +252,9 @@ document.getElementById("logout").onclick = function() {
     document.getElementById("display-text").innerText = "";
     document.querySelector("#user-id-1").innerText = "";
     document.querySelector("#user-id-2").innerText = "";
+    clearTimeout(asyncTimeout1);
+    clearTimeout(asyncTimeout2);
+    while (emailList.lastChild) {
+        emailList.removeChild(emailList.lastChild);
+    }
 }
