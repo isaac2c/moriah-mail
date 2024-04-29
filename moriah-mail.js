@@ -58,7 +58,7 @@ asyncEmail1 = {
     "sender": "noreply@edifyingmail.com",
     "subject": "New login detected",
     "text": "A new device has signed into your account.<br><br>If this was not you, please immediately change your password and take \
-    steps to secure your account.  If this was you, you may safely disregard this email.<br><br>Thank you for using Edifying Mail!"
+    steps to secure your account.<br>If this was you, you may safely disregard this email.<br><br>Thank you for using Edifying Mail!"
 };
 asyncEmail2 = {
     "id": "async-email-2",
