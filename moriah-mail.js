@@ -93,9 +93,11 @@ function nonSubmit(event) {
         for (const email of emails) {
             constructEmail(email.id, email.date, email.sender, email.subject, email.text);
         }
-        readEmails = localStorage.getItem("read").split(" ");
-        for (const readEmail of readEmails) {
-            document.getElementById(readEmail).style.boxShadow = "none";
+        if (localStorage.getItem("read")) {
+            readEmails = localStorage.getItem("read").split(" ");
+            for (const readEmail of readEmails) {
+                document.getElementById(readEmail).style.boxShadow = "none";
+            }
         }
         login = true;
         modalDialog.close();
