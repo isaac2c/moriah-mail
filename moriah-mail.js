@@ -104,7 +104,7 @@ modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
 
 // CONSTRUCT EMAIL
-// These functions produce the emails displayed in Stephen's inbox.
+// These functions produce the emails displayed in the inbox.
 
 function constructEmail(emailID, emailDate, emailSender, emailSubject, emailText) {
     newEmail = document.createElement("div");
@@ -166,7 +166,7 @@ loginForm = document.querySelector("#login-form");
 loginForm.addEventListener("submit", nonSubmit);
 function nonSubmit(event) {
     event.preventDefault(event);
-    // Change login form
+    // Change username
     if (loginForm[0].value == "admin@constantinslibrary.com") {
         document.querySelector("#user-id-1").innerText = "Stephen";
         document.querySelector("#user-id-2").innerText = "Stephen";
@@ -243,4 +243,13 @@ if (!localStorage.getItem("date-mail-clicked")) {
 
 // LOGOUT
 // This function determines the result of clicking the logout button.
-//Should reset subject header to blankspace, not clear.
+
+document.getElementById("logout").onclick = function() {
+    login = false;
+    modalDialog.showModal();
+    document.getElementById("subject-header").innerHTML = "&nbsp";
+    document.getElementById("display-sender").innerText = "";
+    document.getElementById("display-text").innerText = "";
+    document.querySelector("#user-id-1").innerText = "";
+    document.querySelector("#user-id-2").innerText = "";
+}
