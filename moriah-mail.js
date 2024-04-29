@@ -189,6 +189,13 @@ function nonSubmit(event) {
             setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
         }
         if (Number(localStorage.getItem("first-login")) + 30000 <= Date.now()) {
+            if (localStorage.getItem("date-mail-clicked")) {
+                if (!document.getElementById("async-email-click")) {
+                    if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login")) + 30000) {
+                        constructAsync3();
+                    }
+                }
+            }
             constructAsync2();
         } else {
             setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 30000) - Date.now());
