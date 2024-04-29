@@ -19,8 +19,7 @@ indirectEval = eval;
 // This code sets information stored in local storage to expire if 30 days or more have elapsed since the user last accessed the site.
 
 if (Number(localStorage.getItem("last-accessed")) <= (Date.now() - 2592000000)) {
-    localStorage.removeItem("first-login");
-    localStorage.removeItem("date-mail-clicked");
+    localStorage.clear();
 }
 localStorage.setItem("last-accessed", Date.now());
 
