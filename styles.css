@@ -52,7 +52,7 @@ dialog::backdrop {
 }
 
 label input {
-    display: inline-block;
+    display: block;
 }
 
 /* HEADER */
