@@ -51,14 +51,14 @@ dialog::backdrop {
     backdrop-filter: blur(0.5rem);
 }
 
-#login-logo {
+#login-logo #login-submit label  {
     display: block;
     margin: 0 auto;
     width: 60%;
 }
 
 label {
-    display: block;
+    padding-bottom: 1em;
 }
 
 /* HEADER */
