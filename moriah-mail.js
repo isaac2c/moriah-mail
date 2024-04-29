@@ -107,7 +107,16 @@ modalDialog.showModal();
 // MEMORABLE INFORMATION
 // This function determines the behaviour of the memorable information link.
 
-
+document.getElementById("forgot-link").onclick = function() {
+    document.getElementById("password-container").innerHTML = "Memorable information: \
+    <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
+    // Change username
+    if (loginForm[0].value == "stephen@edifyingmail.com") {
+        document.getElementById("form-paragraph").innerText = "Hint: Mother's maiden name";
+    } else {
+        document.getElementById("form-paragraph").innerText = ""
+    }
+}
 
 // CONSTRUCT EMAIL
 // These functions produce the emails displayed in the inbox.
