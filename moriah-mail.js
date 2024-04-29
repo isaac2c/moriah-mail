@@ -227,7 +227,7 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
                 localStorage.setItem("date-mail-clicked", Date.now());
-                constructAsync3;
+                constructAsync3();
             };
         };
     };
