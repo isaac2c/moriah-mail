@@ -168,51 +168,61 @@ loginForm.addEventListener("submit", nonSubmit);
 function nonSubmit(event) {
     event.preventDefault(event);
     // Change username
-    if (loginForm[0].value == "admin@constantinslibrary.com") {
-        document.querySelector("#user-id-1").innerText = "Stephen";
-        document.querySelector("#user-id-2").innerText = "Stephen";
-        if (!localStorage.getItem("first-login")) {
-            localStorage.setItem("first-login", Date.now());
-        }
-        for (const email of emails) {
-            constructEmail(email.id, email.date, email.sender, email.subject, email.text);
-        }
-        if (Number(localStorage.getItem("first-login")) + 10000 <= Date.now()) {
-            if (localStorage.getItem("date-mail-clicked")) {
-                if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login")) + 10000) {
-                    constructAsync3();
+    if (loginForm[0].value == "stephen@edifyingmail.com") {
+        if (document.getElementById("memorableInfo")) {
+            if (document.getElementById("memorableInfo") == "Olsen") {
+                document.querySelector("#user-id-1").innerText = "Stephen";
+                document.querySelector("#user-id-2").innerText = "Stephen";
+                if (!localStorage.getItem("first-login")) {
+                    localStorage.setItem("first-login", Date.now());
                 }
-            }
-            constructAsync1();
-        } else {
-            asyncTimeout1 = setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
-        }
-        if (Number(localStorage.getItem("first-login")) + 600000 <= Date.now()) {
-            if (localStorage.getItem("date-mail-clicked")) {
-                if (!document.getElementById("async-email-click")) {
-                    if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login")) + 600000) {
+                for (const email of emails) {
+                    constructEmail(email.id, email.date, email.sender, email.subject, email.text);
+                }
+                if (Number(localStorage.getItem("first-login")) + 10000 <= Date.now()) {
+                    if (localStorage.getItem("date-mail-clicked")) {
+                        if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login")) + 10000) {
+                            constructAsync3();
+                        }
+                    }
+                    constructAsync1();
+                } else {
+                    asyncTimeout1 = setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
+                }
+                if (Number(localStorage.getItem("first-login")) + 600000 <= Date.now()) {
+                    if (localStorage.getItem("date-mail-clicked")) {
+                        if (!document.getElementById("async-email-click")) {
+                            if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login")) + 600000) {
+                                constructAsync3();
+                            }
+                        }
+                    }
+                    constructAsync2();
+                } else {
+                    asyncTimeout2 = setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
+                }
+                if (localStorage.getItem("date-mail-clicked")) {
+                    if (!document.getElementById("async-email-click")) {
                         constructAsync3();
                     }
                 }
+                if (localStorage.getItem("read")) {
+                    readEmails = localStorage.getItem("read").split(" ");
+                    for (const readEmail of readEmails) {
+                        document.getElementById(readEmail).style.boxShadow = "none";
+                    }
+                }
+                login = true;
+                modalDialog.close();
+                loginForm.innerHTML = loginFormReset;
+            } else {
+
             }
-            constructAsync2();
         } else {
-            asyncTimeout2 = setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
+
         }
-        if (localStorage.getItem("date-mail-clicked")) {
-            if (!document.getElementById("async-email-click")) {
-                constructAsync3();
-            }
-        }
-        if (localStorage.getItem("read")) {
-            readEmails = localStorage.getItem("read").split(" ");
-            for (const readEmail of readEmails) {
-                document.getElementById(readEmail).style.boxShadow = "none";
-            }
-        }
-        login = true;
-        modalDialog.close();
-        loginForm.innerHTML = loginFormReset;
+    } else {
+        
     }
 };
 
