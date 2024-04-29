@@ -187,7 +187,7 @@ function nonSubmit(event) {
             }
             constructAsync1();
         } else {
-            var asyncTimeout1 = setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
+            asyncTimeout1 = setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
         }
         if (Number(localStorage.getItem("first-login")) + 600000 <= Date.now()) {
             if (localStorage.getItem("date-mail-clicked")) {
@@ -199,7 +199,7 @@ function nonSubmit(event) {
             }
             constructAsync2();
         } else {
-            var asyncTimeout2 = setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
+            asyncTimeout2 = setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
         }
         if (localStorage.getItem("date-mail-clicked")) {
             if (!document.getElementById("async-email-click")) {
