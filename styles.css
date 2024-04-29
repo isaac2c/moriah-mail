@@ -58,13 +58,16 @@ dialog::backdrop {
 }
 
 label {
-    padding-top: 0.5em;
     padding-bottom: 2em;
 }
 
 input {
     width: 100%;
     font-size: 1rem;
+}
+
+#login-submit {
+    padding-top: 1rem;
 }
 
 /* HEADER */
