@@ -108,13 +108,19 @@ modalDialog.showModal();
 // This function determines the behaviour of the memorable information link.
 
 document.getElementById("forgot-link").onclick = function() {
-    document.getElementById("password-container").innerHTML = "Memorable information: \
-    <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
     // Change username
     if (loginForm[0].value == "stephen@edifyingmail.com") {
+        document.getElementById("password-container").innerHTML = "Memorable information: \
+    <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
         document.getElementById("form-paragraph").innerText = "Hint: Mother's maiden name";
     } else {
-        document.getElementById("form-paragraph").innerText = ""
+        if (loginForm[0].value == "estherabigailolsen@edifyingmail.com") {
+            document.getElementById("password-container").innerHTML = "Memorable information: \
+        <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
+            document.getElementById("form-paragraph").innerText = "Hint: First pet";
+        } else {
+            alert("Please check username.")
+        }
     }
 }
 
