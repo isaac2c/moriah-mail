@@ -1,12 +1,31 @@
+// DATA STRUCUTRES
+// These data structures contain information used to construct the emails displayed in Stephen's inbox.
+
+emails = [
+    {
+        "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
+        "sender": "user@domain.com",
+        "subject": "For your immediate attention",
+        "text": "Dear sir,<br>I am a Nigerian Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+    }
+];
+
+// EARLY DECLARATIONS
+// This is a function used elsewhere that must be declared early.
+
+indirectEval = eval();
+
 // CLEAR LOCAL STORAGE
 // This code sets information stored in local storage to expire if 30 days or more have elapsed since the user last accessed the site.
+
 if (Number(localStorage.getItem("last-accessed")) <= (Date.now() - 2592000000)) {
+    localStorage.removeItem("first-login");
     localStorage.removeItem("date-mail-clicked");
 }
 localStorage.setItem("last-accessed", Date.now());
 
-//
-//
+// LOGIN PAGE
+// This code presents the user with a login page when they attempt to access the Edifying Mail email client.
 
 login = false;
 document.onkeydown = function(event) {
@@ -19,6 +38,40 @@ document.onkeydown = function(event) {
 modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
 
+// CONSTRUCT EMAIL
+// This function produces the emails displayed in Stephen's inbox.
+
+function constructEmail(emailDate, emailSender, emailSubject, emailText) {
+    newEmail = document.createElement("div");
+    newEmail.setAttribute("class", "email-block inner-content");
+    newDate = document.createElement("p")
+    tempDate = indirectEval(emailDate);
+    options = {
+        hour12: false,
+        weekday: "short",
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+    };
+    newDate.innerText = new Intl.DateTimeFormat(undefined, options).format(tempDate);
+    newSender = document.createElement("p");
+    newSender.innerText = emailSender;
+    newSubject = document.createElement("p");
+    newSubject.innerText = emailSubject;
+    newEmail.append(newDate, newSender, newSubject);
+    newEmail.onclick = function() {
+        document.getElementById("subject-header").innerText = emailSubject;
+        document.getElementById("display-sender").innerText = "From: " + emailSender;
+        document.getElementById("display-text").innerHTML = emailText;
+    };
+    document.getElementById("email-list").append(newEmail);
+};
+
+// LOGIN FORM
+// This code determines the behaviour of the login form element in response to user input.
+
 loginForm = document.querySelector("#login-form");
 loginForm.addEventListener("submit", nonSubmit);
 function nonSubmit(event) {
@@ -29,8 +82,12 @@ function nonSubmit(event) {
         document.querySelector("#user-id-2").innerText = "Stephen";
         login = true;
         modalDialog.close();
+        localStorage.setItem("first-login", Date.now());
     }
 };
+
+// CHANGING HEADER
+// This code determines the behaviour of the word "Mail" in the page header upon being clicked by the user.
 
 changingHeader = document.querySelector("#mail");
 if (!localStorage.getItem("date-mail-clicked")) {
@@ -47,10 +104,7 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
                 localStorage.setItem("date-mail-clicked", Date.now());
-                console.log(new Date(Number(localStorage.getItem("date-mail-clicked"))));
             };
         };
     };
-} else {
-    console.log(new Date(Number(localStorage.getItem("date-mail-clicked"))));
 }
