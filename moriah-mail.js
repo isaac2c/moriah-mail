@@ -192,6 +192,8 @@ function nonSubmit(event) {
         if (localStorage.getItem("date-mail-clicked")) {
             if (!document.getElementById("async-email-click")) {
                 constructAsync3();
+            }
+        }
         if (localStorage.getItem("read")) {
             readEmails = localStorage.getItem("read").split(" ");
             for (const readEmail of readEmails) {
