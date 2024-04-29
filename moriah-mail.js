@@ -80,9 +80,12 @@ function nonSubmit(event) {
     if (loginForm[0].value == "admin@constantinslibrary.com") {
         document.querySelector("#user-id-1").innerText = "Stephen";
         document.querySelector("#user-id-2").innerText = "Stephen";
+        localStorage.setItem("first-login", Date.now());
+        for (const email of emails) {
+            constructEmail(email.date, email.sender, email.subject, email.text);
+        }
         login = true;
         modalDialog.close();
-        localStorage.setItem("first-login", Date.now());
     }
 };
 
