@@ -73,8 +73,9 @@ input {
 
 #login-submit {
     margin-top: 1.5rem;
+    padding: 0.5rem 0;
     background-color: rgb(200, 50, 70);
-    color: (rgb(255, 255, 255));
+    color: rgb(255, 255, 255);
 }
 
 /* HEADER */
