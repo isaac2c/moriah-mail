@@ -87,7 +87,7 @@ function constructEmail(emailID, emailDate, emailSender, emailSubject, emailText
         document.getElementById("subject-header").innerText = emailSubject;
         document.getElementById("display-sender").innerText = "From: " + emailSender;
         document.getElementById("display-text").innerHTML = emailText;
-        document.getElementById(emailID)style.boxShadow = "none";
+        document.getElementById(emailID).style.boxShadow = "none";
         if (localStorage.getItem("read")) {
             localStorage.setItem("read", localStorage.getItem("read") + " " + emailID);
         } else {
