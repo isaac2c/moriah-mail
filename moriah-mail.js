@@ -28,6 +28,27 @@ emails = [
         "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
         "sender": "user@domain.com",
         "subject": "For your immediate attention",
+        "text": "Dear sir,<br>I am a Ugandan Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+    },
+    {
+        "id": "email-5",
+        "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
+        "sender": "user@domain.com",
+        "subject": "For your immediate attention",
+        "text": "Dear sir,<br>I am a Ugandan Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+    },
+    {
+        "id": "email-6",
+        "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
+        "sender": "user@domain.com",
+        "subject": "For your immediate attention",
+        "text": "Dear sir,<br>I am a Ugandan Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+    },
+    {
+        "id": "email-7",
+        "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
+        "sender": "user@domain.com",
+        "subject": "For your immediate attention",
         "text": "Dear sir,<br>I am a Spanish Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
     }
 ];
