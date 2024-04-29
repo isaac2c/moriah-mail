@@ -281,8 +281,12 @@ document.getElementById("logout").onclick = function() {
     document.getElementById("display-text").innerText = "";
     document.querySelector("#user-id-1").innerText = "";
     document.querySelector("#user-id-2").innerText = "";
-    clearTimeout(asyncTimeout1);
-    clearTimeout(asyncTimeout2);
+    if (asyncTimeout1) {
+        clearTimeout(asyncTimeout1);
+    }
+    if (asyncTimeout2) {
+        clearTimeout(asyncTimeout2);
+    }
     while (emailList.lastChild) {
         emailList.removeChild(emailList.lastChild);
     }
