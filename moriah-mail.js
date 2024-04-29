@@ -171,9 +171,6 @@ function nonSubmit(event) {
     if (loginForm[0].value == "admin@constantinslibrary.com") {
         document.querySelector("#user-id-1").innerText = "Stephen";
         document.querySelector("#user-id-2").innerText = "Stephen";
-        while (emailList.lastChild) {
-            emailList.removeChild(emailList.lastChild);
-        }
         if (!localStorage.getItem("first-login")) {
             localStorage.setItem("first-login", Date.now());
         }
