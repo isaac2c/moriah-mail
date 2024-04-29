@@ -189,8 +189,8 @@ function nonSubmit(event) {
     event.preventDefault(event);
     // Change username
     if (loginForm[0].value == "stephen@edifyingmail.com") {
-        if (document.getElementById("memorableInfo")) {
-            if (document.getElementById("memorableInfo") == "Olsen") {
+        if (document.getElementById("mem-info")) {
+            if (loginForm[1].value == "Olsen") {
                 document.querySelector("#user-id-1").innerText = "Stephen";
                 document.querySelector("#user-id-2").innerText = "Stephen";
                 if (!localStorage.getItem("first-login")) {
@@ -235,13 +235,13 @@ function nonSubmit(event) {
                 login = true;
                 modalDialog.close();
                 loginForm.innerHTML = loginFormReset;
-            } else {
+            } else { alert("Please check credentials.");
 
             }
-        } else {
+        } else { alert("Please check credentials.");
 
         }
-    } else {
+    } else { alert("Please check credentials.");
 
     }
 };
