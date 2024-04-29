@@ -233,7 +233,6 @@ function nonSubmit(event) {
                 }
                 login = true;
                 modalDialog.close();
-                loginForm.innerHTML = loginFormReset;
             } else { alert("Please check credentials.");
 
             }
