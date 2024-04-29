@@ -80,7 +80,6 @@ asyncEmail3 = {
 
 indirectEval = eval;
 const emailList = document.querySelector("#email-list");
-loginFormReset = document.querySelector("#login-form").innerHTML;
 
 // CLEAR LOCAL STORAGE
 // This code sets information stored in local storage to expire if 30 days or more have elapsed since the user last accessed the site.
@@ -207,7 +206,7 @@ function nonSubmit(event) {
                     }
                     constructAsync1();
                 } else {
-                    asyncTimeout1 = setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
+                    var asyncTimeout1 = setTimeout(constructAsync1, (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
                 }
                 if (Number(localStorage.getItem("first-login")) + 600000 <= Date.now()) {
                     if (localStorage.getItem("date-mail-clicked")) {
@@ -219,7 +218,7 @@ function nonSubmit(event) {
                     }
                     constructAsync2();
                 } else {
-                    asyncTimeout2 = setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
+                    var asyncTimeout2 = setTimeout(constructAsync2, (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
                 }
                 if (localStorage.getItem("date-mail-clicked")) {
                     if (!document.getElementById("async-email-click")) {
