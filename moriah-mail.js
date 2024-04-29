@@ -186,12 +186,12 @@ function nonSubmit(event) {
             }
             constructAsync1();
         } else {
-            setTimeout(constructAsync1(), (Number(localStorage.getItem("first-login")) + 10000) - Date.now())
+            setTimeout(constructAsync1(), (Number(localStorage.getItem("first-login")) + 10000) - Date.now());
         }
         if (Number(localStorage.getItem("first-login")) + 600000 <= Date.now()) {
             constructAsync2();
         } else {
-            setTimeout(constructAsync2(), (Number(localStorage.getItem("first-login")) + 600000) - Date.now())
+            setTimeout(constructAsync2(), (Number(localStorage.getItem("first-login")) + 600000) - Date.now());
         }
         if (localStorage.getItem("date-mail-clicked")) {
             if (!document.getElementById("async-email-click")) {
@@ -227,7 +227,7 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
                 localStorage.setItem("date-mail-clicked", Date.now());
-                constructEmail(asyncEmail3.id, asyncEmail3.date, asyncEmail3.sender, asyncEmail3.subject, asyncEmail3.text);
+                constructAsync3;
             };
         };
     };
