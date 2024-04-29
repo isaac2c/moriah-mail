@@ -51,7 +51,7 @@ dialog::backdrop {
     backdrop-filter: blur(0.5rem);
 }
 
-label {
+label input {
     display: inline-block;
 }
 
