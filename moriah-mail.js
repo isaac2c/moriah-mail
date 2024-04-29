@@ -104,6 +104,11 @@ document.onkeydown = function(event) {
 modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
 
+// MEMORABLE INFORMATION
+// This function determines the behaviour of the memorable information link.
+
+
+
 // CONSTRUCT EMAIL
 // These functions produce the emails displayed in the inbox.
 
@@ -222,7 +227,7 @@ function nonSubmit(event) {
 
         }
     } else {
-        
+
     }
 };
 

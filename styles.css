@@ -85,6 +85,10 @@ form p {
     cursor: pointer;
 }
 
+#login-submit:active {
+    background-color: rgb(164, 34, 59);
+}
+
 /* HEADER */
 
 header {
