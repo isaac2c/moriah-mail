@@ -51,6 +51,10 @@ dialog::backdrop {
     backdrop-filter: blur(0.5rem);
 }
 
+label {
+    display: inline-block;
+}
+
 /* HEADER */
 
 header {
