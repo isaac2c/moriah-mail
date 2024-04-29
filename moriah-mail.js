@@ -13,7 +13,7 @@ emails = [
 // EARLY DECLARATIONS
 // This is a function used elsewhere that must be declared early.
 
-indirectEval = eval();
+indirectEval = eval;
 
 // CLEAR LOCAL STORAGE
 // This code sets information stored in local storage to expire if 30 days or more have elapsed since the user last accessed the site.
