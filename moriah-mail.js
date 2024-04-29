@@ -163,8 +163,7 @@ function constructAsync3() {
 // This function determines the behaviour of the memorable information link.
 
 document.getElementById("forgot-link").onclick = function() {
-    // Change username
-    if (loginForm[0].value == "stephen@edifyingmail.com") {
+    if (loginForm[0].value == "stephen.malling@edifyingmail.com") {
         document.getElementById("password-container").innerHTML = "Memorable information: \
     <input id=\"mem-info\" type=\"text\" name=\"mem-info\" required><\/input>";
         document.getElementById("form-paragraph").innerText = "Hint: Mother's maiden name";
@@ -186,8 +185,7 @@ loginForm = document.querySelector("#login-form");
 loginForm.addEventListener("submit", nonSubmit);
 function nonSubmit(event) {
     event.preventDefault(event);
-    // Change username
-    if (loginForm[0].value == "stephen@edifyingmail.com") {
+    if (loginForm[0].value == "stephen.malling@edifyingmail.com") {
         if (document.getElementById("mem-info")) {
             if (loginForm[1].value == "Olsen") {
                 document.querySelector("#user-id-1").innerText = "Stephen";
@@ -233,6 +231,7 @@ function nonSubmit(event) {
                 }
                 login = true;
                 modalDialog.close();
+                loginForm[1].value = "";
             } else { alert("Please check credentials.");
 
             }
