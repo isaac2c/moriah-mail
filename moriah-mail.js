@@ -1,4 +1,4 @@
-// DATA STRUCUTRES
+// DATA STRUCTURES
 // These data structures contain information used to construct the emails displayed in Stephen's inbox.
 
 emails = [
@@ -52,6 +52,27 @@ emails = [
         "text": "Dear sir,<br>I am a Spanish Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
     }
 ];
+asyncEmail1 = {
+    "id": "async-email-1",
+    "date": "new Date(Number(localStorage.getItem(\"first-login\")) + 10000)",
+    "sender": "async@domain.com",
+    "subject": "Async Email 1",
+    "text": "This arrives after 10 seconds."
+};
+asyncEmail2 = {
+    "id": "async-email-2",
+    "date": "new Date(Number(localStorage.getItem(\"first-login\")) + 600000)",
+    "sender": "async@domain.com",
+    "subject": "Async Email 2",
+    "text": "This arrives after 10 minutes."
+};
+asyncEmail3 = {
+    "id": "async-email-click",
+    "date": "new Date(Number(localStorage.getItem(\"date-mail-clicked\")))",
+    "sender": "async@domain.com",
+    "subject": "Async Email Click",
+    "text": "This arrives on click."
+};
 
 // EARLY DECLARATIONS
 // This is a function used elsewhere that must be declared early.
@@ -81,7 +102,7 @@ modalDialog = document.getElementById("modal-dialog");
 modalDialog.showModal();
 
 // CONSTRUCT EMAIL
-// This function produces the emails displayed in Stephen's inbox.
+// These functions produce the emails displayed in Stephen's inbox.
 
 function constructEmail(emailID, emailDate, emailSender, emailSubject, emailText) {
     newEmail = document.createElement("div");
@@ -117,6 +138,20 @@ function constructEmail(emailID, emailDate, emailSender, emailSubject, emailText
     };
     document.getElementById("email-list").append(newEmail);
 };
+function constructAsync1() {
+    constructEmail(asyncEmail1.id, asyncEmail1.date, asyncEmail1.sender, asyncEmail1.subject, asyncEmail1.text);
+    emailList.insertBefore(document.getElementById("async-email-click"), emailList.firstChild);
+};
+function constructAsync2() {
+    constructEmail(asyncEmail2.id, asyncEmail2.date, asyncEmail2.sender, asyncEmail2.subject, asyncEmail2.text);
+    emailList.insertBefore(document.getElementById("async-email-1"), emailList.firstChild);
+};
+function constructAsync3() {
+    constructEmail(asyncEmail3.id, asyncEmail3.date, asyncEmail3.sender, asyncEmail3.subject, asyncEmail3.text);
+    emailList.insertBefore(document.getElementById("async-email-2"), emailList.firstChild);
+};
+
+
 
 // LOGIN FORM
 // This code determines the behaviour of the login form element in response to user input.
@@ -129,12 +164,34 @@ function nonSubmit(event) {
     if (loginForm[0].value == "admin@constantinslibrary.com") {
         document.querySelector("#user-id-1").innerText = "Stephen";
         document.querySelector("#user-id-2").innerText = "Stephen";
+        const emailList = document.querySelector("#email-list");
+        while (emailList.lastChild) {
+            emailList.removeChild(emailList.lastChild);
+        }
         if (!localStorage.getItem("first-login")) {
             localStorage.setItem("first-login", Date.now());
         }
         for (const email of emails) {
             constructEmail(email.id, email.date, email.sender, email.subject, email.text);
         }
+        if (Number(localStorage.getItem("first-login")) + 10000 >= Date.now()) {
+            if (localStorage.getItem("date-mail-clicked")) {
+                if (Number(localStorage.getItem("date-mail-clicked")) < Number(localStorage.getItem("first-login") + 10000)) {
+                    constructAsync3();
+                }
+            }
+            constructAsync1();
+        } else {
+            setTimeout(constructAsync1(), Date.now - (Number(localStorage.getItem("first-login")) + 10000))
+        }
+        if (Number(localStorage.getItem("first-login")) + 600000 >= Date.now()) {
+            constructAsync2();
+        } else {
+            setTimeout(constructAsync2(), Date.now - (Number(localStorage.getItem("first-login")) + 600000))
+        }
+        if (localStorage.getItem("date-mail-clicked")) {
+            if (!document.getElementById("async-email-click")) {
+                constructAsync3();
         if (localStorage.getItem("read")) {
             readEmails = localStorage.getItem("read").split(" ");
             for (const readEmail of readEmails) {
@@ -164,7 +221,12 @@ if (!localStorage.getItem("date-mail-clicked")) {
                 changingHeader.innerText = "Mail";
                 changingHeader.style.cursor = "auto";
                 localStorage.setItem("date-mail-clicked", Date.now());
+                constructEmail(asyncEmail3.id, asyncEmail3.date, asyncEmail3.sender, asyncEmail3.subject, asyncEmail3.text);
             };
         };
     };
 }
+
+// LOGOUT
+// This function determines the result of clicking the logout button.
+//Should reset subject header to blankspace, not clear.
