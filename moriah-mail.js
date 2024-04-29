@@ -3,6 +3,7 @@
 
 emails = [
     {
+        "id": "email-1",
         "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
         "sender": "user@domain.com",
         "subject": "For your immediate attention",
@@ -40,8 +41,9 @@ modalDialog.showModal();
 // CONSTRUCT EMAIL
 // This function produces the emails displayed in Stephen's inbox.
 
-function constructEmail(emailDate, emailSender, emailSubject, emailText) {
+function constructEmail(emailID, emailDate, emailSender, emailSubject, emailText) {
     newEmail = document.createElement("div");
+    newEmail.setAttribute("id", "")
     newEmail.setAttribute("class", "email-block inner-content");
     newDate = document.createElement("p")
     tempDate = indirectEval(emailDate);
@@ -64,6 +66,12 @@ function constructEmail(emailDate, emailSender, emailSubject, emailText) {
         document.getElementById("subject-header").innerText = emailSubject;
         document.getElementById("display-sender").innerText = "From: " + emailSender;
         document.getElementById("display-text").innerHTML = emailText;
+        newEmail.style.boxShadow = "none";
+        if (localStorage.getItem("read")) {
+            localStorage.setItem("read", localStorage.getItem("read") + " " + emailID);
+        } else {
+            localStorage.setItem("read", emailID);
+        }
     };
     document.getElementById("email-list").append(newEmail);
 };
@@ -79,9 +87,15 @@ function nonSubmit(event) {
     if (loginForm[0].value == "admin@constantinslibrary.com") {
         document.querySelector("#user-id-1").innerText = "Stephen";
         document.querySelector("#user-id-2").innerText = "Stephen";
-        localStorage.setItem("first-login", Date.now());
+        if (!localStorage.getItem("first-login")) {
+            localStorage.setItem("first-login", Date.now());
+        }
         for (const email of emails) {
-            constructEmail(email.date, email.sender, email.subject, email.text);
+            constructEmail(email.id, email.date, email.sender, email.subject, email.text);
+        }
+        readEmails = localStorage.getItem("read").split(" ");
+        for (const readEmail of readEmails) {
+            document.getElementById(readEmail).style.boxShadow = "none";
         }
         login = true;
         modalDialog.close();
