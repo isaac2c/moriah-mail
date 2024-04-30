@@ -278,13 +278,13 @@ document.getElementById("logout").onclick = function() {
     document.getElementById("display-text").innerText = "";
     document.querySelector("#user-id-1").innerText = "";
     document.querySelector("#user-id-2").innerText = "";
+    while (emailList.lastChild) {
+        emailList.removeChild(emailList.lastChild);
+    }
     if (asyncTimeout1) {
         clearTimeout(asyncTimeout1);
     }
     if (asyncTimeout2) {
         clearTimeout(asyncTimeout2);
-    }
-    while (emailList.lastChild) {
-        emailList.removeChild(emailList.lastChild);
     }
 }
