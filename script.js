@@ -160,7 +160,7 @@ function constructAsync3() {
 };
 
 // MEMORABLE INFORMATION
-// This function determines the behaviour of the memorable information link.
+// This function determines the result of user interaction with the memorable information link.
 
 document.getElementById("forgot-link").onclick = function() {
     if (loginForm[0].value == "stephen.malling@edifyingmail.com") {
@@ -179,7 +179,7 @@ document.getElementById("forgot-link").onclick = function() {
 };
 
 // LOGIN FORM
-// This code determines the behaviour of the login form element in response to user input.
+// This code determines the result of user interaction with the login form element.
 
 loginForm = document.querySelector("#login-form");
 loginForm.addEventListener("submit", nonSubmit);
@@ -244,7 +244,7 @@ function nonSubmit(event) {
 };
 
 // CHANGING HEADER
-// This code determines the behaviour of the word "Mail" in the page header upon being clicked by the user.
+// This code determines the result of user interaction with the word "Mail", as it appears in the page header.
 
 changingHeader = document.querySelector("#mail");
 if (!localStorage.getItem("date-mail-clicked")) {
@@ -268,7 +268,7 @@ if (!localStorage.getItem("date-mail-clicked")) {
 }
 
 // LOGOUT
-// This function determines the result of clicking the logout button.
+// This function determines the result of user interaction with the logout button.
 
 document.getElementById("logout").onclick = function() {
     login = false;
