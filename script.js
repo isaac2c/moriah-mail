@@ -4,52 +4,53 @@
 emails = [
     {
         "id": "email-1",
-        "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
-        "sender": "user@domain.com",
-        "subject": "For your immediate attention",
-        "text": "Dear sir,<br>I am a Nigerian Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+        "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 83880000)",
+        "sender": "noreply@thedatingservice.email",
+        "subject": "Keep looking for love!",
+        "text": "Dear Stephen,<br><br>The best things in life are worth waiting for.  You never know what's round the corner..."
     },
     {
         "id": "email-2",
         "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
-        "sender": "user@domain.com",
-        "subject": "For your immediate attention",
-        "text": "Dear sir,<br>I am a German Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+        "sender": "estherabigailolsen@edifyingmail.com",
+        "subject": "I'm sorry",
+        "text": "Stephen,<br><br>I’m sorry for what happened.  I’m sorry to have put you through that.  I’m thankful that you were \
+        there.<br><br>I know that you blame them.  I know that you don’t approve of the company I keep, that you think them my captors \
+        – a corrupting influence that imperils my mortal soul.<br><br>I need you to know that you are wrong.<br><br>I would call them \
+        my liberators, but they only showed me the latent potential for realising my own freedom.  We don’t simply pursue pleasure; we \
+        revel and mourn in the pursuit of communal sensation.  They are a family and you, above all others, ought to know why that \
+        matters to me.<br><br>I do not begrudge you your church; I ask only that you permit me mine.<br><br>I really do love you, you \
+        know.  Call me sometime.<br><br>Abigail<br><br>PS. I know what you mean about feeling like someone’s following you.  I had the \
+        same sensation in the hospital, but I blamed it on the drugs."
     },
     {
         "id": "email-3",
         "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
-        "sender": "user@domain.com",
-        "subject": "For your immediate attention",
-        "text": "Dear sir,<br>I am a Ugandan Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+        "sender": "noreply@thedatingservice.email",
+        "subject": "You're getting attention...",
+        "text": "Dear Stephen,<br><br>User: John1987 has viewed your profile.<br>Login to the app to see your matches."
     },
     {
         "id": "email-4",
         "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
-        "sender": "user@domain.com",
-        "subject": "For your immediate attention",
-        "text": "Dear sir,<br>I am a Ugandan Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+        "sender": "noreply@thedatingservice.email",
+        "subject": "You're getting attention...",
+        "text": "Dear Stephen,<br><br>User: admin@constantinslibrary.com has viewed your profile.<br>Login to the app to see your matches."
     },
     {
         "id": "email-5",
         "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
-        "sender": "user@domain.com",
+        "sender": "princegerald@honest.email",
         "subject": "For your immediate attention",
-        "text": "Dear sir,<br>I am a Ugandan Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+        "text": "Dear sir,<br>I am a prince, wrongfully detained by a rival country.  Please send 500euro to secure my release and I will \
+        share my wealth with you.  I anticipate your response.<br><br>Yours sincerely,<br>Prince Gerald"
     },
     {
         "id": "email-6",
         "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
-        "sender": "user@domain.com",
-        "subject": "For your immediate attention",
-        "text": "Dear sir,<br>I am a Ugandan Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
-    },
-    {
-        "id": "email-7",
-        "date": "new Date(Number(localStorage.getItem(\"first-login\")) - 86400000)",
-        "sender": "user@domain.com",
-        "subject": "For your immediate attention",
-        "text": "Dear sir,<br>I am a Spanish Prince.  Please send rand.<br><br>Yours sincerely,<br>Prince Princington"
+        "sender": "noreply@thedatingservice.email",
+        "subject": "You're getting attention...",
+        "text": "Dear Stephen,<br><br>User: BigRob has viewed your profile.<br>Login to the app to see your matches."
     }
 ];
 asyncEmail1 = {
@@ -63,16 +64,19 @@ asyncEmail1 = {
 asyncEmail2 = {
     "id": "async-email-2",
     "date": "new Date(Number(localStorage.getItem(\"first-login\")) + 600000)",
-    "sender": "async@domain.com",
-    "subject": "Async Email 2",
-    "text": "This arrives after 10 minutes."
+    "sender": "noreply@churchofourlady.email",
+    "subject": "A Letter from Fr Jacob",
+    "text": "Dear Parishoners,<br><br>Please find attached a letter from Fr Jacob concerning his recent absence.<br><br><em>Attachments:<\/em>\
+    <br><a href=\"\/uploaded-resources\/letter_from_fr_jacob.pdf\" download=\"letter_from_fr_jacob\">letter_from_fr_jacob.pdf<\/a>"
 };
 asyncEmail3 = {
     "id": "async-email-click",
     "date": "new Date(Number(localStorage.getItem(\"date-mail-clicked\")))",
-    "sender": "async@domain.com",
-    "subject": "Async Email Click",
-    "text": "This arrives on click."
+    "sender": "noreply@edifyingmail.com",
+    "subject": "An Edifying Discourse",
+    "text": "All observation is not only a receiving, a discovery, but also a creation, and in so far as it is that, the crucial thing is \
+    what the observer himself is… for all things spiritual are appropriated only in freedom; but what is appropriated in freedom must \
+    also be produced in freedom.<br>-Søren Kierkegaard, <cite>Edifying Discourses<\/cite>, p. 56"
 };
 
 // EARLY DECLARATIONS
