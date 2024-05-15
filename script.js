@@ -66,7 +66,7 @@ asyncEmail2 = {
     "date": "new Date(Number(localStorage.getItem(\"first-login\")) + 600000)",
     "sender": "noreply@churchofourlady.email",
     "subject": "A Letter from Fr Jacob",
-    "text": "Dear Parishoners,<br><br>Please find attached a letter from Fr Jacob concerning his recent absence.<br><br><em>Attachments:<\/em>\
+    "text": "Dear Parishoners,<br><br>Please find attached a letter from Fr Jacob concerning his recent absence.<br><br><b>Attachments:<\/b>\
     <br><a href=\"\/uploaded-resources\/letter_from_fr_jacob.pdf\" download=\"letter_from_fr_jacob\">letter_from_fr_jacob.pdf<\/a>"
 };
 asyncEmail3 = {
